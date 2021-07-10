@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TrendsKuwait</string>
+
+    <string name="button_add_to_cart">Add to cart</string>
+    <string name="title_item_search">Search</string>
+
+    <string name="button_login">Log in</string>
+    <string name="label_login_title">You’re not logged in!</string>
+    <string name="label_login_message">Please log in and start shopping</string>
+
+    <string name="ok">OK</string>
+
+    <string name="title_item_share">Share</string>
+
+    <string name="error_product_share">Unable to get product’s link</string>
+
+    <string name="title_location_permission_dialog">Permission required</string>
+    <string name="message_location_permission_dialog">To be able to use this feature, you should allow Zad to access your location.</string>
+
+    <string name="sort_by">Sort By</string>
+    <string name="order_latest">Latest</string>
+    <string name="order_oldest">Oldest</string>
+    <string name="order_popular">Popular</string>
+    <string name="order_all">All</string>
+
+</resources>

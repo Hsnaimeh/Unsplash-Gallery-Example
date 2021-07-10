@@ -1,0 +1,71 @@
+if (project.name == "app") {
+    apply plugin: "com.android.application"
+} else {
+    apply plugin: "com.android.library"
+}
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-parcelize"
+apply plugin: "kotlin-kapt"
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'dagger.hilt.android.plugin'
+
+android {
+    compileSdkVersion 30
+
+    buildFeatures.dataBinding true
+    buildFeatures.viewBinding true
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+
+        versionCode Integer.parseInt(getProperty("app.versionCode"))
+        versionName getProperty("app.versionName")
+        buildConfigField 'String', 'VERSION_NAME_GLOABL', "\"${versionName}\""
+
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+
+    lintOptions {
+        checkDependencies = true
+        checkGeneratedSources = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    flavorDimensions("version")
+    productFlavors {
+
+        development {
+            dimension "version"
+            buildConfigField("String", "VERSION_NAME", "\"${getProperty("app.versionName")}-debug\"")
+        }
+
+        staging {
+            dimension "version"
+            buildConfigField("String", "VERSION_NAME", "\"${getProperty("app.versionName")}-stage\"")
+        }
+
+        production {
+            dimension "version"
+            buildConfigField("String", "VERSION_NAME", "\"${getProperty("app.versionName")}\"")
+
+        }
+    }
+
+    kotlinOptions {
+        freeCompilerArgs += "-Xuse-experimental=kotlin.Experimental"
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    packagingOptions {
+        exclude 'META-INF/AL2.0'
+        exclude 'META-INF/LGPL2.1'
+        exclude("META-INF/*.kotlin_module")
+        exclude("androidsupportmultidexversion.txt")
+    }
+}

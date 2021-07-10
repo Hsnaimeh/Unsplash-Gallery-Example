@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Error messages -->
+    <string name="message_no_internet_connection">The connection has failed, please try again</string>
+    <string name="message_something_went_wrong">Something went wrong, please try again.</string>
+    <string name="title_no_internet_connection">No Connection!</string>
+    <string name="title_something_went_wrong">Oops!</string>
+</resources>

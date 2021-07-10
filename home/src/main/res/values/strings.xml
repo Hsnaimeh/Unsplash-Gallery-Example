@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="sponsored">Sponsored</string>
+    <string name="empty_photos_title">There’s no photos yet!</string>
+    <string name="empty_photos_message">Sorry, Come back later</string>
+
+
+
+</resources>

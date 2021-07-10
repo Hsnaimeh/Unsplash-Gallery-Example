@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.V2.DarkActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="bottomSheetDialogTheme">@style/AppTheme.V2.ThemeOverlay.BottomSheetDialog</item>
+    </style>
+
+    <style name="AppTheme.V2.Activity.Dialog" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.V2" parent="Theme.MaterialComponents.Light">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="bottomSheetDialogTheme">@style/AppTheme.V2.ThemeOverlay.BottomSheetDialog</item>
+    </style>
+
+    <style name="AppTheme.V2.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="colorControlNormal">@color/color_accent</item>
+        <item name="bottomSheetDialogTheme">@style/AppTheme.V2.ThemeOverlay.BottomSheetDialog</item>
+    </style>
+
+    <style name="AppTheme.V2.NoActionBar.TransparentInsets" parent="AppTheme.V2.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="bottomSheetDialogTheme">@style/AppTheme.V2.ThemeOverlay.BottomSheetDialog</item>
+    </style>
+
+    <style name="AppTheme.V2.TransparentInsets" parent="AppTheme.V2">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="bottomSheetDialogTheme">@style/AppTheme.V2.ThemeOverlay.BottomSheetDialog</item>
+    </style>
+
+    <style name="AppTheme.V2.TransparentInsets.DarkActionBar" parent="AppTheme.V2.DarkActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="bottomSheetDialogTheme">@style/AppTheme.V2.ThemeOverlay.BottomSheetDialog</item>
+    </style>
+</resources>

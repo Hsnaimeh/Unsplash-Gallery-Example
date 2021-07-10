@@ -1,0 +1,5 @@
+dependencies {
+    api project(":navigation")
+
+    testImplementation project(":di")
+}

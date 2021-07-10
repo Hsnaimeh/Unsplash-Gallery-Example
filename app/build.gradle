@@ -1,0 +1,56 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+
+    buildFeatures.dataBinding true
+    buildFeatures.viewBinding true
+    defaultConfig {
+        applicationId "com.trends.gallery"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    flavorDimensions("version")
+    productFlavors {
+
+        development {
+            versionNameSuffix "-debug"
+            applicationIdSuffix ".debug"
+            getIsDefault().set(true)
+        }
+
+        staging {
+            versionNameSuffix "-staging"
+            applicationIdSuffix ".staging"
+        }
+
+        production {
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation project(":core")
+    implementation project(":main")
+    implementation project(":home")
+
+
+}

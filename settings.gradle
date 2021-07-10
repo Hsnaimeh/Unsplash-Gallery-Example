@@ -1,0 +1,10 @@
+rootProject.name = "TrendsKuwait Gallery"
+include ':app'
+include ':flipper'
+include ':core'
+include ':data'
+include ':network'
+include ':di'
+include ':navigation'
+include ':main'
+include ':home'

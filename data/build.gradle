@@ -1,0 +1,14 @@
+android {
+
+    productFlavors.all {
+        buildConfigField("int", "VERSION_CODE", "${getProperty("app.versionCode")}")
+        buildConfigField("String", "UNSPLASH_ACCESS_KEY", "${getProperty("app.unsplashAccessKey.${name}")}")
+        buildConfigField("String", "APP_API_BASE", "${getProperty("app.api.base")}")
+
+
+    }
+}
+
+dependencies {
+    api project(":network")
+}

@@ -1,0 +1,41 @@
+apply plugin: "io.gitlab.arturbosch.detekt"
+
+buildscript {
+
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.0.0"
+    }
+}
+
+tasks.withType(io.gitlab.arturbosch.detekt.Detekt) {
+    include '**/*.kt'
+    include '**/*.kts'
+    exclude '**/*Spec.kt'
+    exclude '**/**Test.kt'
+    exclude 'build/'
+
+    for (int i = 0; i < subprojects.size(); i++) {
+        exclude subprojects[i].project.name + "/build/"
+    }
+}
+
+detekt {
+    ArrayList<String> paths = new ArrayList<String>()
+    project.subprojects.forEach { subProject ->
+        paths.add(subProject.projectDir.absolutePath + "/src/main")
+    }
+    input = files(paths)
+    config = files("$rootDir/detekt_config.yml")
+    parallel = true
+    failFast = false
+    reports {
+        txt.enabled = false
+        xml.enabled = false
+        html.destination = file("build/reports/detekt.html")
+    }
+}
+tasks.detekt.jvmTarget = "1.8"
